@@ -274,7 +274,8 @@ public class EchoServer extends ObservableServer
         {
             port = DEFAULT_PORT; //Set port to 5555
         }
-
+        
+        // creates a connection using ServerToClientCxn to implement an AbstractConnectionFactory interface
         AbstractConnectionFactory connectionFactory = new ServerToClientCxn();
         EchoServer sv = new EchoServer(port, connectionFactory);
 
